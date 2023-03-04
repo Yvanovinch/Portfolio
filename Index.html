@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Log In and Register Form</title>
+<Sign In and Sign Up Form</title>
+<link rel = "stylesheet" href = "samp.css">
+<script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class = "container">
+<div class = "form-box">
+<h1 id="title"> Sign up</h1>
+<form>
+<div class = "input-group">
+<div class ="input-field" id="nameField">
+<i class="fa-regular fa-user"></i>
+<input type ="text" placeholder="Name">
+</div>
+<div class ="input-field">
+<i class="fa-regular fa-envelope"></i>
+<input type ="email" placeholder="Email">
+</div>
+<div class ="input-field">
+<i class="fa-regular fa-key"></i>
+<input type ="password" placeholder="Password">
+</div>
+<p> Forget Password<a href="#"> Click Here</a></p>
+</div>
+<div class = "btn-field">
+<button type = "button" id="logInBtn">Log In</button>
+<button type = "button" id="registerbtn" class = "disable">Register</button>
+</div>
+</form>
+</div>
+</div>
+<script>
+let logInBtn = document.getElementById("logInBtn");
+let registerbtn = document.getElementById("registerbtn");
+let nameField = document.getElementById("nameField");
+let title = document.getElementById("title");
+
+logInBtn.onclick=function(){
+nameField.style.maxHeight = "0";
+title.innerHTML="Log In";
+registerbtn.classList.add("disable");
+logInBtn.classList.remove("disable");
+}
+registerbtn.onclick=function(){
+nameField.style.maxHeight = "60px";
+title.innerHTML="Register";
+registerbtn.classList.remove("disable");
+logInBtn.classList.add("disable");
+}
+
+</script>
+</body>
+</html>
